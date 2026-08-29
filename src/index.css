@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-urdu: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Urdu Typesetting', serif;
+    --font-arabic: 'Noto Sans Arabic', Tahoma, sans-serif;
+    --font-latin: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  [dir="ltr"] {
+    font-family: var(--font-latin);
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  line-height: 2.2;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-latin {
+  font-family: var(--font-latin);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.6 !important;
+  }
+  @page {
+    margin: 15mm;
+  }
+  /* Remove scrollbars, dark backgrounds, and max-height constraints during print */
+  .printable-document,
+  .printable-area {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .printable-text {
+    color: #000000 !important;
+    background: transparent !important;
+    font-size: 13pt !important;
+    line-height: 2.2 !important;
+    white-space: pre-wrap !important;
+  }
+  /* Hide non-printable interactive elements */
+  button, 
+  .no-print-btn,
+  header,
+  footer,
+  aside,
+  nav {
+    display: none !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Remix Citizen Legal Aid \u0026 Document Assistant",
+  "description": "This tool provides general Pakistani legal information and automated template generation for literacy and legal awareness. It is not legal advice or a substitute for a qualified lawyer. Always verify local provincial procedures with a court or legal aid society before filing.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
